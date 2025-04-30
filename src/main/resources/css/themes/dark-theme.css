@@ -1,0 +1,224 @@
+/* Dark Theme */
+
+* {
+    -fx-primary-color: #5599ff;
+    -fx-secondary-color: #2c3e50;
+    -fx-accent-color: #3498db;
+
+    -fx-background-color-primary: #2d2d2d;
+    -fx-background-color-secondary: #1a1a1a;
+    -fx-background-color-tertiary: #444444;
+
+    -fx-text-color-primary: #eeeeee;
+    -fx-text-color-secondary: #aaaaaa;
+    -fx-text-color-tertiary: #777777;
+
+    -fx-border-color-primary: #555555;
+    -fx-border-color-secondary: #666666;
+
+    -fx-success-color: #5cb85c;
+    -fx-warning-color: #ffab40;
+    -fx-error-color: #ff5252;
+}
+
+/* Background Colors */
+.theme-dark .login-root,
+.theme-dark .register-root,
+.theme-dark .dashboard-root,
+.theme-dark .editor-root {
+    -fx-background-color: -fx-background-color-secondary;
+}
+
+.theme-dark .header-section,
+.theme-dark .editor-header {
+    -fx-background-color: -fx-background-color-primary;
+}
+
+.theme-dark .sidebar {
+    -fx-background-color: #444444;
+}
+
+.theme-dark .user-info-container,
+.theme-dark .blocks-container,
+.theme-dark .tag-container {
+    -fx-background-color: -fx-background-color-primary;
+}
+
+/* Text Colors */
+.theme-dark .welcome-text,
+.theme-dark .header-text,
+.theme-dark .app-title,
+.theme-dark .label {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-dark .subtitle-text,
+.theme-dark .subheader-text,
+.theme-dark .field-label {
+    -fx-text-fill: -fx-text-color-secondary;
+}
+
+/* Input Fields */
+.theme-dark .input-field,
+.theme-dark .title-field,
+.theme-dark .tags-field,
+.theme-dark .search-field {
+    -fx-background-color: -fx-background-color-tertiary;
+    -fx-border-color: -fx-border-color-primary;
+    -fx-text-fill: -fx-text-color-primary;
+    -fx-prompt-text-fill: -fx-text-color-tertiary;
+}
+
+.theme-dark .input-field:focused,
+.theme-dark .title-field:focused,
+.theme-dark .tags-field:focused,
+.theme-dark .search-field:focused {
+    -fx-border-color: -fx-primary-color;
+    -fx-background-color: derive(-fx-background-color-tertiary, -10%);
+}
+
+/* Buttons */
+.theme-dark .login-button,
+.theme-dark .primary-button,
+.theme-dark .new-journal-button,
+.theme-dark .save-button,
+.theme-dark .add-tag-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.theme-dark .login-button:hover,
+.theme-dark .primary-button:hover,
+.theme-dark .new-journal-button:hover,
+.theme-dark .save-button:hover,
+.theme-dark .add-tag-button:hover {
+    -fx-background-color: derive(-fx-primary-color, -10%);
+}
+
+.theme-dark .register-button,
+.theme-dark .secondary-button,
+.theme-dark .back-button {
+    -fx-border-color: -fx-primary-color;
+    -fx-text-fill: -fx-primary-color;
+    -fx-background-color: transparent;
+}
+
+.theme-dark .register-button:hover,
+.theme-dark .secondary-button:hover,
+.theme-dark .back-button:hover {
+    -fx-background-color: derive(-fx-background-color-primary, 10%);
+}
+
+/* Table Styles */
+.theme-dark .journal-table {
+    -fx-background-color: -fx-background-color-primary;
+}
+
+.theme-dark .journal-table .column-header {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.theme-dark .journal-table .column-header .label {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-dark .journal-table .table-row-cell {
+    -fx-background-color: -fx-background-color-primary;
+    -fx-border-color: transparent transparent -fx-border-color-primary transparent;
+}
+
+.theme-dark .journal-table .table-row-cell:selected {
+    -fx-background-color: -fx-secondary-color;
+}
+
+/* Explicitly style table cells for text color */
+.theme-dark .journal-table .table-cell {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-dark .journal-table .table-cell .text {
+    -fx-fill: -fx-text-color-primary;
+}
+
+/* Editor Specific */
+.theme-dark .main-text-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-dark .main-text-area .content {
+    -fx-background-color: transparent;
+}
+
+.theme-dark .format-toolbar {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.theme-dark .format-button,
+.theme-dark .block-button {
+    -fx-background-color: transparent;
+    -fx-border-color: -fx-border-color-secondary;
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-dark .format-button:selected,
+.theme-dark .format-button:hover,
+.theme-dark .block-button:hover {
+    -fx-background-color: derive(-fx-background-color-tertiary, 20%);
+}
+
+/* Status Messages */
+.theme-dark .save-status {
+    -fx-text-fill: -fx-success-color;
+}
+
+.theme-dark .status-label,
+.theme-dark .status-message {
+    -fx-text-fill: -fx-error-color;
+}
+
+.theme-dark .status-label.success,
+.theme-dark .status-message.success {
+    -fx-text-fill: -fx-success-color;
+}
+
+/* Todo and Toggle Blocks */
+.theme-dark .todo-block,
+.theme-dark .toggle-block,
+.theme-dark .heading-block {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.theme-dark .todo-checkbox,
+.theme-dark .toggle-header,
+.theme-dark .heading-text {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+/* Menu Items */
+.theme-dark .menu-item {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.theme-dark .menu-item .label {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-dark .menu-item:focused {
+    -fx-background-color: -fx-secondary-color;
+}
+
+/* Ensure table row delete buttons are visible */
+.theme-dark .delete-button {
+    -fx-text-fill: #ff6666; /* Brighter red for visibility */
+}
+
+/* MenuButton styling */
+.theme-dark .theme-menu-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.theme-dark .theme-menu-button .arrow {
+    -fx-background-color: white;
+}

@@ -1,0 +1,226 @@
+/* Light Theme - Default */
+
+* {
+    -fx-primary-color: #4a86e8;
+    -fx-secondary-color: #e8f0fe;
+    -fx-accent-color: #4285f4;
+
+    -fx-background-color-primary: #ffffff;
+    -fx-background-color-secondary: #f5f5f5;
+    -fx-background-color-tertiary: #e0e0e0;
+
+    -fx-text-color-primary: #333333;
+    -fx-text-color-secondary: #666666;
+    -fx-text-color-tertiary: #999999;
+
+    -fx-border-color-primary: #dddddd;
+    -fx-border-color-secondary: #cccccc;
+
+    -fx-success-color: #7daa50;
+    -fx-warning-color: #f57c00;
+    -fx-error-color: #d32f2f;
+}
+
+/* Background Colors */
+.theme-light .login-root,
+.theme-light .register-root,
+.theme-light .dashboard-root,
+.theme-light .editor-root {
+    -fx-background-color: -fx-background-color-secondary;
+}
+
+.theme-light .header-section,
+.theme-light .editor-header {
+    -fx-background-color: -fx-background-color-primary;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.theme-light .sidebar {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.theme-light .user-info-container,
+.theme-light .blocks-container,
+.theme-light .tag-container {
+    -fx-background-color: -fx-background-color-primary;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+/* Text Colors */
+.theme-light .welcome-text,
+.theme-light .header-text,
+.theme-light .app-title,
+.theme-light .label {
+    -fx-text-fill: -fx-text-color-primary;
+    -fx-font-weight: bold;
+}
+
+.theme-light .subtitle-text,
+.theme-light .subheader-text,
+.theme-light .field-label {
+    -fx-text-fill: -fx-text-color-secondary;
+}
+
+/* Input Fields */
+.theme-light .input-field,
+.theme-light .title-field,
+.theme-light .tags-field,
+.theme-light .search-field {
+    -fx-background-color: white;
+    -fx-border-color: -fx-border-color-primary;
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-light .input-field:focused,
+.theme-light .title-field:focused,
+.theme-light .tags-field:focused,
+.theme-light .search-field:focused {
+    -fx-border-color: -fx-primary-color;
+    -fx-background-color: #f9fbff;
+}
+
+/* Buttons */
+.theme-light .login-button,
+.theme-light .primary-button,
+.theme-light .new-journal-button,
+.theme-light .save-button,
+.theme-light .add-tag-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.theme-light .login-button:hover,
+.theme-light .primary-button:hover,
+.theme-light .new-journal-button:hover,
+.theme-light .save-button:hover,
+.theme-light .add-tag-button:hover {
+    -fx-background-color: derive(-fx-primary-color, -10%);
+}
+
+.theme-light .register-button,
+.theme-light .secondary-button,
+.theme-light .back-button {
+    -fx-border-color: -fx-primary-color;
+    -fx-text-fill: -fx-primary-color;
+    -fx-background-color: transparent;
+}
+
+.theme-light .register-button:hover,
+.theme-light .secondary-button:hover,
+.theme-light .back-button:hover {
+    -fx-background-color: derive(-fx-secondary-color, -5%);
+}
+
+/* Table Styles */
+.theme-light .journal-table {
+    -fx-background-color: -fx-background-color-primary;
+}
+
+.theme-light .journal-table .column-header {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.theme-light .journal-table .column-header .label {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-light .journal-table .table-row-cell {
+    -fx-background-color: -fx-background-color-primary;
+    -fx-border-color: transparent transparent -fx-border-color-primary transparent;
+}
+
+.theme-light .journal-table .table-row-cell:selected {
+    -fx-background-color: derive(-fx-secondary-color, -5%);
+}
+
+/* Explicitly style table cells for text color */
+.theme-light .journal-table .table-cell {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-light .journal-table .table-cell .text {
+    -fx-fill: -fx-text-color-primary;
+}
+
+/* Editor Specific */
+.theme-light .main-text-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-light .main-text-area .content {
+    -fx-background-color: transparent;
+}
+
+.theme-light .format-toolbar {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.theme-light .format-button,
+.theme-light .block-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-border-color-primary;
+    -fx-text-fill: -fx-text-color-secondary;
+}
+
+.theme-light .format-button:selected,
+.theme-light .format-button:hover,
+.theme-light .block-button:hover {
+    -fx-background-color: derive(-fx-background-color-tertiary, -10%);
+}
+
+/* Status Messages */
+.theme-light .save-status {
+    -fx-text-fill: -fx-success-color;
+}
+
+.theme-light .status-label,
+.theme-light .status-message {
+    -fx-text-fill: -fx-error-color;
+}
+
+.theme-light .status-label.success,
+.theme-light .status-message.success {
+    -fx-text-fill: -fx-success-color;
+}
+
+/* Todo and Toggle Blocks */
+.theme-light .todo-block,
+.theme-light .toggle-block,
+.theme-light .heading-block {
+    -fx-background-color: #f9f9f9;
+}
+
+.theme-light .todo-checkbox,
+.theme-light .toggle-header,
+.theme-light .heading-text {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+/* Menu Items */
+.theme-light .menu-item {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.theme-light .menu-item .label {
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.theme-light .menu-item:focused {
+    -fx-background-color: -fx-secondary-color;
+}
+
+/* Ensure table row delete buttons are visible */
+.theme-light .delete-button {
+    -fx-text-fill: #cc0000;
+}
+
+/* MenuButton styling */
+.theme-light .theme-menu-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.theme-light .theme-menu-button .arrow {
+    -fx-background-color: white;
+}

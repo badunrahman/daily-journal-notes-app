@@ -1,0 +1,205 @@
+/* Common styles for login and register pages */
+.login-root, .register-root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Typography */
+.app-title {
+    -fx-text-fill: #4a86e8;
+    -fx-font-weight: bold;
+}
+
+.welcome-text, .header-text {
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
+
+.subtitle-text, .subheader-text {
+    -fx-text-fill: #666666;
+    -fx-font-size: 13px;
+}
+
+.field-label {
+    -fx-text-fill: #555555;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.status-message, .status-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #d32f2f;
+    -fx-padding: 5px 0;
+    -fx-min-height: 30px;
+}
+
+.status-message.success, .status-label.success {
+    -fx-text-fill: #388e3c;
+}
+
+.register-prompt {
+    -fx-text-fill: #666666;
+    -fx-font-size: 13px;
+}
+
+/* Input fields */
+.input-field {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-border-color: #4a86e8;
+    -fx-background-color: #f9fbff;
+}
+
+/* Buttons */
+.login-button, .primary-button {
+    -fx-background-color: #4a86e8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.login-button:hover, .primary-button:hover {
+    -fx-background-color: #3b78de;
+}
+
+.register-button, .secondary-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #4a86e8;
+    -fx-text-fill: #4a86e8;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.register-button:hover, .secondary-button:hover {
+    -fx-background-color: #edf4ff;
+}
+
+/* Registration specific */
+.id-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+}
+
+.id-field {
+    -fx-background-color: #e8f0fe;
+    -fx-border-color: #4a86e8;
+    -fx-text-fill: #4a86e8;
+    -fx-font-weight: bold;
+    -fx-font-family: monospace;
+    -fx-font-size: 16px;
+    -fx-alignment: center;
+}
+
+.copy-button {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+}
+
+.copy-button:hover {
+    -fx-background-color: #cccccc;
+}
+
+.warning-text {
+    -fx-text-fill: #f57c00;
+    -fx-font-style: italic;
+    -fx-font-size: 12px;
+}
+
+/* Dark theme variant */
+.theme-dark .login-root, .theme-dark .register-root {
+    -fx-background-color: #2d2d2d;
+}
+
+.theme-dark .app-title {
+    -fx-text-fill: #5599ff;
+}
+
+.theme-dark .welcome-text, .theme-dark .header-text,
+.theme-dark .field-label, .theme-dark .id-label {
+    -fx-text-fill: #eeeeee;
+}
+
+.theme-dark .subtitle-text, .theme-dark .subheader-text,
+.theme-dark .register-prompt {
+    -fx-text-fill: #aaaaaa;
+}
+
+.theme-dark .input-field {
+    -fx-background-color: #3a3a3a;
+    -fx-border-color: #555555;
+    -fx-text-fill: white;
+}
+
+.theme-dark .input-field:focused {
+    -fx-border-color: #5599ff;
+    -fx-background-color: #333333;
+}
+
+.theme-dark .register-button, .theme-dark .secondary-button {
+    -fx-border-color: #5599ff;
+    -fx-text-fill: #5599ff;
+}
+
+.theme-dark .register-button:hover, .theme-dark .secondary-button:hover {
+    -fx-background-color: rgba(85, 153, 255, 0.1);
+}
+
+.theme-dark .id-field {
+    -fx-background-color: #333333;
+    -fx-border-color: #5599ff;
+    -fx-text-fill: #5599ff;
+}
+
+.theme-dark .copy-button {
+    -fx-background-color: #444444;
+    -fx-text-fill: #dddddd;
+}
+
+.theme-dark .copy-button:hover {
+    -fx-background-color: #555555;
+}
+
+.theme-dark .warning-text {
+    -fx-text-fill: #ffab40;
+}
+
+/* Theme menu button */
+.theme-menu-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+    -fx-min-width: 80px;
+}
+
+.theme-menu-button:hover {
+    -fx-background-color: derive(-fx-primary-color, -10%);
+}
+
+.theme-menu-button .arrow {
+    -fx-background-color: white;
+}
+
+.theme-menu-button .menu-item {
+    -fx-padding: 5px 10px;
+}
+
+.theme-menu-button .menu-item:focused {
+    -fx-background-color: -fx-secondary-color;
+}

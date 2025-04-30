@@ -1,0 +1,423 @@
+/* Base styles */
+.editor-root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header section */
+.editor-header {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.back-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4a86e8;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 10px;
+}
+
+.back-button:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.editor-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.save-status {
+    -fx-text-fill: #7daa50;
+    -fx-font-style: italic;
+}
+
+.field-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+}
+
+.title-field {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.tags-field {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-pref-width: 150px;
+}
+
+.tag-color-combo {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 5px;
+    -fx-padding: 2px;
+}
+
+.add-tag-button {
+    -fx-background-color: #4a86e8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 50%;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-padding: 0;
+}
+
+.add-tag-button:hover {
+    -fx-background-color: #3b78de;
+}
+
+.tag-container {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-min-height: 30px;
+}
+
+.tag-label {
+    -fx-background-radius: 15px;
+    -fx-padding: 3px 8px;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+/* Main content area */
+.content-area {
+    -fx-background-color: #f5f5f5;
+}
+
+.editor-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.editor-scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.blocks-container {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    -fx-padding: 20px;
+}
+
+.main-text-area {
+    -fx-background-color: transparent;
+    -fx-padding: 10px 0;
+    -fx-font-size: 14px;
+    -fx-border-width: 0;
+}
+
+.main-text-area .content {
+    -fx-background-color: transparent;
+}
+
+/* Footer section */
+.editor-footer {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, -2);
+}
+
+.format-toolbar {
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 5px;
+}
+
+.format-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3px;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-font-weight: bold;
+}
+
+.format-button:selected {
+    -fx-background-color: #dddddd;
+}
+
+.block-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px 10px;
+}
+
+.block-button:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+.save-button {
+    -fx-background-color: #4a86e8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 3px;
+    -fx-padding: 5px 15px;
+}
+
+.save-button:hover {
+    -fx-background-color: #3b78de;
+}
+
+.command-container {
+    -fx-background-color: white;
+}
+
+.command-field {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 15px;
+    -fx-prompt-text-fill: #999999;
+}
+
+/* Todo block styling */
+.todo-block {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-margin-bottom: 10px;
+}
+
+.todo-checkbox {
+    -fx-font-size: 14px;
+}
+
+.todo-checkbox:selected {
+    -fx-opacity: 0.6;
+}
+
+.todo-text {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #dddddd;
+}
+
+/* Toggle block styling */
+.toggle-block {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 5px;
+    -fx-margin-bottom: 10px;
+}
+
+.toggle-header {
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+}
+
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-font-weight: bold;
+}
+
+.toggle-title {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #dddddd;
+    -fx-font-weight: bold;
+}
+
+.toggle-content {
+    -fx-padding: 0 10px 10px 20px;
+}
+
+.toggle-content-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* Heading block styling */
+.heading-block {
+    -fx-margin-bottom: 10px;
+}
+
+.heading-level {
+    -fx-min-width: 70px;
+}
+
+.heading-text {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.h1 {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.h2 {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.h3 {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Bullet list styling */
+.bullet-item {
+    -fx-margin-bottom: 5px;
+}
+
+.bullet-point {
+    -fx-font-size: 18px;
+    -fx-min-width: 20px;
+}
+
+.bullet-text {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #dddddd;
+}
+
+/* Block manipulation buttons */
+.delete-block-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cc0000;
+    -fx-font-size: 14px;
+    -fx-min-width: 25px;
+    -fx-min-height: 25px;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.delete-block-button:hover {
+    -fx-text-fill: #ff0000;
+}
+
+.add-item-button, .add-block-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4a86e8;
+    -fx-padding: 5px;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 3px;
+    -fx-cursor: hand;
+}
+
+.add-item-button:hover, .add-block-button:hover {
+    -fx-background-color: #edf4ff;
+}
+
+/* Dark theme variant */
+.theme-dark {
+    -fx-background-color: #2d2d2d;
+}
+
+.theme-dark .editor-header,
+.theme-dark .editor-footer {
+    -fx-background-color: #333333;
+}
+
+.theme-dark .blocks-container {
+    -fx-background-color: #3a3a3a;
+}
+
+.theme-dark .title-field,
+.theme-dark .tags-field,
+.theme-dark .tag-color-combo,
+.theme-dark .tag-container,
+.theme-dark .command-field {
+    -fx-background-color: #444444;
+    -fx-border-color: #555555;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #aaaaaa;
+}
+
+.theme-dark .main-text-area {
+    -fx-text-fill: white;
+}
+
+.theme-dark .field-label,
+.theme-dark .editor-label {
+    -fx-text-fill: #dddddd;
+}
+
+.theme-dark .format-toolbar {
+    -fx-background-color: #444444;
+}
+
+.theme-dark .format-button,
+.theme-dark .block-button {
+    -fx-border-color: #555555;
+    -fx-text-fill: #dddddd;
+}
+
+.theme-dark .format-button:selected {
+    -fx-background-color: #555555;
+}
+
+.theme-dark .todo-block,
+.theme-dark .toggle-block,
+.theme-dark .heading-block,
+.theme-dark .bullet-item {
+    -fx-background-color: #444444;
+}
+
+.theme-dark .todo-checkbox,
+.theme-dark .bullet-point {
+    -fx-text-fill: white;
+}
+
+.theme-dark .todo-text,
+.theme-dark .toggle-title,
+.theme-dark .heading-text,
+.theme-dark .bullet-text,
+.theme-dark .toggle-content-field {
+    -fx-border-color: #555555;
+    -fx-text-fill: white;
+}
+
+.theme-dark .add-item-button,
+.theme-dark .add-block-button {
+    -fx-border-color: #555555;
+    -fx-text-fill: #5599ff;
+}
+
+.theme-dark .add-item-button:hover,
+.theme-dark .add-block-button:hover {
+    -fx-background-color: rgba(85, 153, 255, 0.1);
+}
+
+/* Theme menu button */
+.theme-menu-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+    -fx-min-width: 80px;
+}
+
+.theme-menu-button:hover {
+    -fx-background-color: derive(-fx-primary-color, -10%);
+}
+
+.theme-menu-button .arrow {
+    -fx-background-color: white;
+}
+
+.theme-menu-button .menu-item {
+    -fx-padding: 5px 10px;
+}
+
+.theme-menu-button .menu-item:focused {
+    -fx-background-color: -fx-secondary-color;
+}

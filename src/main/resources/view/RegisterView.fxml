@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx"
+             xmlns:fx="http://javafx.com/fxml"
+              fx:controller="controller.RegisterController"
+              styleClass="register-root"
+              prefHeight="400.0" prefWidth="500.0"
+             alignment="CENTER" spacing="15">
+
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <!-- Header -->
+    <Label fx:id="headerLabel" text="Create New Account" styleClass="header-text">
+        <font>
+            <Font size="24" />
+        </font>
+    </Label>
+
+    <Label fx:id="subheaderLabel" text="Your account ID will be generated automatically"
+           styleClass="subheader-text"/>
+
+    <Separator />
+
+    <!-- User information input fields -->
+    <HBox alignment="CENTER" spacing="15">
+        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <Label fx:id="usernameLabel" text="Username" styleClass="field-label"/>
+            <TextField fx:id="usernameField" promptText="Enter username" styleClass="input-field"/>
+        </VBox>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="15">
+        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <Label fx:id="passwordLabel" text="Password" styleClass="field-label"/>
+            <PasswordField fx:id="passwordField" promptText="Enter password" styleClass="input-field"/>
+        </VBox>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="15">
+        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <Label fx:id="confirmPasswordLabel" text="Confirm Password" styleClass="field-label"/>
+            <PasswordField fx:id="confirmPasswordField" promptText="Confirm password" styleClass="input-field"/>
+        </VBox>
+    </HBox>
+
+    <!-- Status message -->
+    <Label fx:id="statusLabel" styleClass="status-label"/>
+
+    <!-- Action buttons -->
+    <HBox alignment="CENTER" spacing="20">
+        <Button fx:id="registerButton" text="Register" onAction="#handleRegister" styleClass="primary-button"/>
+        <Button fx:id="cancelButton" text="Cancel" onAction="#handleCancel" styleClass="secondary-button"/>
+    </HBox>
+
+    <!-- Generated ID display (shown after successful registration) -->
+    <VBox fx:id="idDisplayContainer" alignment="CENTER" spacing="10" visible="false">
+        <Label fx:id="idLabel" text="Your Account ID:" styleClass="id-label"/>
+        <HBox alignment="CENTER" spacing="10">
+            <TextField fx:id="generatedIdField" editable="false" styleClass="id-field"/>
+            <Button fx:id="copyIdButton" text="Copy" onAction="#handleCopyId" styleClass="copy-button"/>
+        </HBox>
+        <Label fx:id="saveIdLabel" text="Please save this ID. You'll need it to log in." styleClass="warning-text"/>
+    </VBox>
+
+</VBox>

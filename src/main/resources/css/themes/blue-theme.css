@@ -1,0 +1,135 @@
+/* Blue Theme */
+
+* {
+    -fx-primary-color: #1e88e5;
+    -fx-secondary-color: #bbdefb;
+    -fx-accent-color: #42a5f5;
+
+    -fx-background-color-primary: #ffffff;
+    -fx-background-color-secondary: #e3f2fd;
+    -fx-background-color-tertiary: #bbdefb;
+
+    -fx-text-color-primary: #0d47a1;
+    -fx-text-color-secondary: #1565c0;
+    -fx-text-color-tertiary: #1976d2;
+
+    -fx-border-color-primary: #90caf9;
+    -fx-border-color-secondary: #64b5f6;
+
+    -fx-success-color: #43a047;
+    -fx-warning-color: #fb8c00;
+    -fx-error-color: #e53935;
+}
+
+/* Background Colors */
+.login-root, .register-root, .dashboard-root, .editor-root {
+    -fx-background-color: -fx-background-color-secondary;
+}
+
+.header-section, .editor-header {
+    -fx-background-color: -fx-background-color-primary;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.sidebar {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.user-info-container, .blocks-container, .tag-container {
+    -fx-background-color: -fx-background-color-primary;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+/* Text Colors */
+.welcome-text, .header-text, .app-title {
+    -fx-text-fill: -fx-text-color-primary;
+    -fx-font-weight: bold;
+}
+
+.subtitle-text, .subheader-text, .field-label {
+    -fx-text-fill: -fx-text-color-secondary;
+}
+
+/* Input Fields */
+.input-field, .title-field, .tags-field, .search-field {
+    -fx-background-color: white;
+    -fx-border-color: -fx-border-color-primary;
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.input-field:focused, .title-field:focused, .tags-field:focused, .search-field:focused {
+    -fx-border-color: -fx-primary-color;
+    -fx-background-color: #f5f9ff;
+}
+
+/* Buttons */
+.login-button, .primary-button, .new-journal-button, .save-button, .add-tag-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.login-button:hover, .primary-button:hover, .new-journal-button:hover, .save-button:hover, .add-tag-button:hover {
+    -fx-background-color: derive(-fx-primary-color, -10%);
+}
+
+.register-button, .secondary-button, .back-button {
+    -fx-border-color: -fx-primary-color;
+    -fx-text-fill: -fx-primary-color;
+    -fx-background-color: transparent;
+}
+
+.register-button:hover, .secondary-button:hover, .back-button:hover {
+    -fx-background-color: derive(-fx-secondary-color, -5%);
+}
+
+/* Table Styles */
+.journal-table {
+    -fx-background-color: -fx-background-color-primary;
+}
+
+.journal-table .column-header {
+    -fx-background-color: -fx-background-color-tertiary;
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.journal-table .table-row-cell {
+    -fx-background-color: -fx-background-color-primary;
+    -fx-border-color: transparent transparent -fx-border-color-primary transparent;
+}
+
+.journal-table .table-row-cell:selected {
+    -fx-background-color: derive(-fx-secondary-color, -5%);
+}
+
+/* Editor Specific */
+.main-text-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-color-primary;
+}
+
+.format-toolbar {
+    -fx-background-color: -fx-background-color-tertiary;
+}
+
+.format-button, .block-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-border-color-primary;
+    -fx-text-fill: -fx-text-color-secondary;
+}
+
+.format-button:selected, .format-button:hover, .block-button:hover {
+    -fx-background-color: derive(-fx-background-color-tertiary, -10%);
+}
+
+/* Status Messages */
+.save-status {
+    -fx-text-fill: -fx-success-color;
+}
+
+.status-label, .status-message {
+    -fx-text-fill: -fx-error-color;
+}
+
+.status-label.success, .status-message.success {
+    -fx-text-fill: -fx-success-color;
+}

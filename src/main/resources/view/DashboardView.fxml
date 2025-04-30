@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+                    xmlns:fx="http://javafx.com/fxml"
+                   fx:controller="controller.DashboardController"
+        styleClass="dashboard-root"
+                  prefHeight="600.0" prefWidth="800.0">
+
+<!--            styleClass="dashboard-root">-->
+
+    <!-- Top section with welcome message and theme/language controls -->
+    <top>
+        <HBox alignment="CENTER" spacing="20" styleClass="header-section">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label fx:id="welcomeLabel" text="Welcome UserName" styleClass="welcome-text">
+                <font>
+                    <Font size="16"/>
+                </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS" spacing="10">
+                <ToggleButton fx:id="languageToggle" text="EN/FR" styleClass="toggle-button"/>
+                <MenuButton fx:id="themeMenuButton" text="Light" styleClass="theme-menu-button"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- Left sidebar with user info and logout -->
+    <left>
+        <VBox styleClass="sidebar" prefWidth="150" alignment="TOP_CENTER" spacing="15">
+            <padding>
+                <Insets top="20" right="10" bottom="20" left="10"/>
+            </padding>
+            <VBox alignment="CENTER" styleClass="user-info-container">
+                <Label text="UserInfo" styleClass="sidebar-label"/>
+            </VBox>
+            <Region VBox.vgrow="ALWAYS"/> <!-- Spacer -->
+            <Button fx:id="logoutButton" text="Logout" onAction="#handleLogout" styleClass="sidebar-button"/>
+        </VBox>
+    </left>
+
+    <!-- Main content area -->
+    <center>
+        <VBox spacing="20" styleClass="main-content">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- New Journal Button -->
+            <HBox alignment="CENTER">
+                <Button fx:id="newJournalButton" text="NewJournal" onAction="#handleNewJournal"
+                        styleClass="new-journal-button"/>
+            </HBox>
+
+            <!-- Search Field -->
+            <TextField fx:id="searchField" promptText="Search" styleClass="search-field"/>
+
+            <!-- Journal Entries Table -->
+            <TableView fx:id="journalTableView" VBox.vgrow="ALWAYS" styleClass="journal-table">
+                <columns>
+                    <TableColumn fx:id="titleColumn" text="JournalTitle" prefWidth="250"/>
+                    <TableColumn fx:id="dateModifiedColumn" text="DateModified" prefWidth="120"/>
+                    <TableColumn fx:id="dateCreatedColumn" text="DateCreate" prefWidth="120"/>
+                    <TableColumn fx:id="tagsColumn" text="Tags" prefWidth="100"/>
+                    <TableColumn fx:id="deleteColumn" text="" prefWidth="50"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>

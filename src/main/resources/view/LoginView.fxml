@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+              xmlns:fx="http://javafx.com/fxml"
+              fx:controller="controller.LoginController"
+              styleClass="login-root"
+              prefHeight="400.0" prefWidth="500.0">
+
+    <top>
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="30" bottom="20"/>
+            </padding>
+            <Label fx:id="welcomeLabel" text="Welcome Back" styleClass="app-title">
+                <font>
+                    <Font size="26" />
+                </font>
+            </Label>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets left="50" right="50"/>
+            </padding>
+
+            <Label fx:id="subtitleLabel" text="Please login to continue" styleClass="subtitle-text"/>
+
+            <Separator />
+
+            <VBox spacing="5">
+                <Label fx:id="userIdLabel" text="User ID" styleClass="field-label"/>
+                <TextField fx:id="userIdField" promptText="Enter your user ID" styleClass="input-field"/>
+            </VBox>
+
+            <VBox spacing="5">
+                <Label fx:id="passwordLabel" text="Password" styleClass="field-label"/>
+                <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="input-field"/>
+            </VBox>
+
+            <Label fx:id="statusLabel" styleClass="status-message"/>
+
+            <Button fx:id="loginButton" text="Login" onAction="#handleLogin" styleClass="login-button" maxWidth="Infinity">
+                <VBox.margin>
+                    <Insets top="10"/>
+                </VBox.margin>
+            </Button>
+        </VBox>
+    </center>
+
+    <bottom>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets bottom="30"/>
+            </padding>
+            <Label fx:id="noAccountLabel" text="Don't have an account?" styleClass="register-prompt"/>
+            <Button fx:id="createAccountButton" text="Create New Account"
+                    onAction="#handleCreateAccount" styleClass="register-button"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>

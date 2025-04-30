@@ -1,0 +1,216 @@
+/* Base Styles */
+.dashboard-root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.header-section {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    -fx-padding: 10px 20px;
+}
+
+.welcome-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.toggle-button {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 15px;
+    -fx-min-width: 60px;
+    -fx-max-width: 60px;
+    -fx-min-height: 30px;
+    -fx-max-height: 30px;
+    -fx-font-size: 12px;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #4a86e8;
+    -fx-text-fill: white;
+}
+
+.theme-toggle {
+    -fx-background-radius: 50%;
+    -fx-min-width: 30px;
+    -fx-max-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-height: 30px;
+}
+
+.theme-icon {
+    -fx-background-color: #555555;
+    -fx-shape: "M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3z";
+    -fx-min-width: 16px;
+    -fx-min-height: 16px;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #aaaaaa;
+    -fx-padding: 10px;
+}
+
+.user-info-container {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+    -fx-min-height: 40px;
+}
+
+.sidebar-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.sidebar-button {
+    -fx-background-color: white;
+    -fx-text-fill: #333333;
+    -fx-min-width: 120px;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 5px;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+/* Main Content */
+.main-content {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 20px;
+}
+
+.new-journal-button {
+    -fx-background-color: #4a86e8;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-min-width: 150px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 20px;
+}
+
+.new-journal-button:hover {
+    -fx-background-color: #3b78de;
+}
+
+.search-field {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 15px;
+    -fx-prompt-text-fill: #999999;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+/* Journal Table */
+.journal-table {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0, 0, 1);
+}
+
+.journal-table .column-header {
+    -fx-background-color: #dddddd;
+    -fx-font-weight: bold;
+    -fx-padding: 8px;
+}
+
+.journal-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #f0f0f0 transparent;
+    -fx-padding: 5px 0;
+}
+
+.journal-table .table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+    -fx-text-fill: black;
+}
+
+.delete-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cc0000;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.delete-button:hover {
+    -fx-text-fill: #ff0000;
+}
+
+/* Dark Theme Styles (will be applied when theme is toggled) */
+.theme-dark {
+    -fx-background-color: #2d2d2d;
+}
+
+.theme-dark .header-section {
+    -fx-background-color: #333333;
+}
+
+.theme-dark .welcome-text {
+    -fx-text-fill: white;
+}
+
+.theme-dark .sidebar {
+    -fx-background-color: #444444;
+}
+
+.theme-dark .user-info-container,
+.theme-dark .search-field,
+.theme-dark .journal-table {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: white;
+}
+
+.theme-dark .sidebar-button {
+    -fx-background-color: #555555;
+    -fx-text-fill: white;
+}
+
+.theme-dark .sidebar-button:hover {
+    -fx-background-color: #666666;
+}
+
+.theme-dark .journal-table .column-header {
+    -fx-background-color: #444444;
+    -fx-text-fill: white;
+}
+
+.theme-dark .journal-table .table-row-cell {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: white;
+    -fx-border-color: transparent transparent #444444 transparent;
+}
+
+.theme-dark .journal-table .table-row-cell:selected {
+    -fx-background-color: #4a86e8;
+    -fx-text-fill: white;
+}
+
+/* Theme menu button */
+.theme-menu-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+    -fx-min-width: 80px;
+}
+
+.theme-menu-button:hover {
+    -fx-background-color: derive(-fx-primary-color, -10%);
+}
+
+.theme-menu-button .arrow {
+    -fx-background-color: white;
+}
+
+.theme-menu-button .menu-item {
+    -fx-padding: 5px 10px;
+}
+
+.theme-menu-button .menu-item:focused {
+    -fx-background-color: -fx-secondary-color;
+}

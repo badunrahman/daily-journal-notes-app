@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+                   xmlns:fx="http://javafx.com/fxml"
+                   fx:controller="controller.EditorController"
+                   styleClass="editor-root"
+                   prefHeight="600.0" prefWidth="800.0">
+
+    <!-- Top section with back button, title input and tags -->
+    <top>
+        <VBox spacing="10" styleClass="editor-header">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <!-- Top bar with back button and auto-save indicator -->
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <Button fx:id="backButton" text="← Back" onAction="#handleBack" styleClass="back-button"/>
+                <Label HBox.hgrow="ALWAYS" styleClass="editor-label" text="Journal Editor"/>
+                <Label fx:id="saveStatusLabel" text="All changes saved" styleClass="save-status"/>
+            </HBox>
+
+            <!-- Title and tags section -->
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Title" styleClass="field-label"/>
+                    <TextField fx:id="titleField" promptText="Enter journal title..." styleClass="title-field"/>
+                </VBox>
+
+                <VBox spacing="5">
+                    <Label text="Tags" styleClass="field-label"/>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <ComboBox fx:id="tagColorComboBox" promptText="Select color" styleClass="tag-color-combo"/>
+                        <TextField fx:id="tagsField" promptText="Enter tags..." styleClass="tags-field"/>
+                        <Button fx:id="addTagButton" text="+" styleClass="add-tag-button"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+
+            <!-- Tag display area -->
+            <FlowPane fx:id="tagContainer" hgap="5" vgap="5" styleClass="tag-container"/>
+        </VBox>
+    </top>
+
+    <!-- Main content - editing area -->
+    <center>
+        <BorderPane styleClass="content-area">
+            <!-- Main content container for blocks -->
+            <center>
+                <ScrollPane fitToWidth="true" styleClass="editor-scroll-pane">
+                    <VBox fx:id="blockContainer" spacing="10" styleClass="blocks-container">
+                        <padding>
+                            <Insets top="10" right="20" bottom="10" left="20"/>
+                        </padding>
+                        <!-- Dynamic content blocks will be added here -->
+                        <TextArea fx:id="mainTextArea" wrapText="true" VBox.vgrow="ALWAYS"
+                                  promptText="Start writing your journal entry..." styleClass="main-text-area"/>
+                    </VBox>
+                </ScrollPane>
+            </center>
+        </BorderPane>
+    </center>
+
+    <!-- Bottom toolbar with commands and formatting options -->
+    <bottom>
+        <VBox styleClass="editor-footer">
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="format-toolbar">
+                <padding>
+                    <Insets top="10" right="15" bottom="10" left="15"/>
+                </padding>
+
+                <!-- Text formatting options -->
+                <Button fx:id="boldButton" text="B" styleClass="format-button" onAction="#handleBoldButton"/>
+                <Button fx:id="italicButton" text="I" styleClass="format-button" onAction="#handleItalicButton"/>
+                <Button fx:id="underlineButton" text="U" styleClass="format-button" onAction="#handleUnderlineButton"/>
+                <Separator orientation="VERTICAL"/>
+
+                <!-- Block insertion commands -->
+                <Button fx:id="headingButton" text="Heading" styleClass="block-button" onAction="#handleHeadingButton"/>
+                <Button fx:id="bulletButton" text="• Bullet" styleClass="block-button" onAction="#handleBulletButton"/>
+                <Button fx:id="todoButton" text="✓ To-Do" styleClass="block-button" onAction="#insertTodoBlock"/>
+                <Button fx:id="toggleButton" text="▶ Toggle" styleClass="block-button" onAction="#insertToggleBlock"/>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <!-- Save button -->
+                <Button fx:id="saveButton" text="Save" styleClass="save-button" onAction="#handleSave"/>
+            </HBox>
+
+            <!-- Command field for slash commands -->
+            <HBox alignment="CENTER" styleClass="command-container">
+                <padding>
+                    <Insets top="5" right="15" bottom="10" left="15"/>
+                </padding>
+                <TextField fx:id="commandField" promptText="Type / for commands (e.g. /todo, /toggle, /bullet)..."
+                           HBox.hgrow="ALWAYS" styleClass="command-field" onAction="#handleCommand"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>
